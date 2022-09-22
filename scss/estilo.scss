@@ -1,0 +1,10 @@
+@import "var";
+@import "header";
+@import "main";
+@import "footer";
+
+body {
+    background-color: $color-fondo;
+    margin: 0rem;
+    padding: 0rem; 
+}

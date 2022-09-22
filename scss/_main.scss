@@ -1,0 +1,139 @@
+
+@mixin st-boxes {
+    color: $color-primario;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+@mixin boxes-t {
+            font-family: 'Raleway', sans-serif;
+            color: #000;
+            width: 15%;
+            height: 60%;
+            padding: 2rem 0.80rem;
+}
+
+@mixin subtittle {
+            font-family: 'Raleway', sans-serif;
+            font-style: italic;
+            color: $color-primario;
+}
+
+
+.main-index {
+
+    .imagen {
+        background-image: url("/img/front.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 110vh;  
+    }
+
+    .tittle {
+        color: white;
+        padding-top: 7.80rem;
+        font-size: 3rem;
+        font-family: 'Merriweather', serif;
+        font-weight: 900;
+        text-align: center;
+        letter-spacing: 0.125rem;
+    }
+
+    .boxes-2 {
+        display: flex;
+        flex-direction: row;
+        font-family: 'Merriweather', sans-serif;
+        margin: 1rem 2.188rem 5rem;
+
+        .box1 {
+            background-color: $color-fondo;
+            color: $color-secundario;
+            font-size: 5rem;
+            width: 15%;
+            height: 60%;
+            padding-top: 1.90rem;
+            padding-left: 2.188rem;
+            padding-right: 0.10rem;
+            text-align: center;
+            margin: 1rem 0rem;
+
+            .second-box {
+                @include st-boxes;
+            }
+        }
+
+        .box2 {
+            background-color: #fff;
+            color: black;
+            text-align: start;
+            font-size: 1.375rem;
+            padding: 4.688rem 0rem 0rem;
+            width: 25%;
+            height: 60%;
+
+            .second-box {
+                @include st-boxes;
+            }
+        }
+    }
+
+    .med-photo {
+        background-image: url("/img/río.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 78vh;
+
+        .med-text {
+            font-family: 'Merriweather', sans-serif;
+            font-size: 4.375rem;
+            font-weight: 900;
+            letter-spacing: 0.125rem;
+            color: $color-fondo;
+            padding: 11rem 1rem 1rem;
+            text-align: center;
+        }
+    }
+
+    .boxes-texts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 2rem 0rem;
+
+        .box1-tex {
+            @include boxes-t;
+        }
+
+        .box2-tex {
+            @include boxes-t;
+        }
+
+        .box3-tex {
+             @include boxes-t;
+        }
+    }
+}
+
+.main-aves {
+
+    .clas-birds {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        
+    }
+
+    .card {
+        
+        .card-text {
+            color: grey;  
+        }
+
+        .btn-primary {
+            color:#fff;
+            background-color: #9CBF4E;
+            border-color: #9CBF4E;
+        }
+    }
+}
