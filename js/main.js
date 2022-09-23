@@ -1,141 +1,15 @@
 
-
-//let nombre = "Tatiana";
-//let apellido = "Gerzenstein";
-
-
-//const DNI = "33993423";
-
-//let suma = 1+5;
-//let resto = 1-7;
-//let multi = 1*24;
-
-//let num1 = 20;
-//let num2 = 223;
-
-//let nombreCompleto = nombre + " " + apellido
-
-
-//let num1 = prompt ("Ingrese número");
-//let num2 = prompt ("Ingrese número");
-
-//let resultado = num1 + num2
-//alert(resultado)+
-
-/*for(let i=0; i<=10; i+=1){
-    if(i===5){
-    console.log("Saltamos el 5...");
-    continue;
-    }
-    console.log(i)
-}*/
-
-//Condicionales: pedir password a través de prompt y si es 001200 mostrar un alert.
-
-
-/*let dinero = Number(prompt("Total efectivo"));
-let totalCarrito = 9000;
-
-if(dinero > totalCarrito){
-    alert("El envío de su compra es gratis.");
-} else { (dinero < totalCarrito )
-    alert("Su compra no incluye envío.");
-}*/
-
-
-//Ciclos
-
 /*
-for(let i=0; i<100; i+=1){
-     console.log(i);
-}   if (i%2 === 0){
-    document.write("El número es"+ i)
-}   else {
-    document.write("El número es"+ i)
-}
+7) Se informa la confirmación de la compra y se muestra el total.
 */
-/*
-let libro;
-
-do {
-    libro = prompt("Ingresar libro") 
-    if (libro != "esc"){
-        console.log(libro);
-    }
-}while(libro != "esc")
-*/
-
-
-/*let metodoPago = prompt("Elija método de pago")
-
-switch (metodoPago) {
-    case "efectivo":
-        console.log('Pagaste con ' + metodoPago );
-        break;
-    case "cheque":
-        console.log('Pagaste con ' + metodoPago );
-        break;
-    case "tarjeta":
-        console.log('Pagaste con '+ metodoPago);
-        break;
-    default:
-        console.log('No aceptamos '+ metodoPago);
-}
-*/
-
-
-/*
-let dinero = Number(prompt("Total efectivo"));
-let totalCarrito = 9000;
-
-if(dinero > totalCarrito){
-    alert("El envío de su compra es gratis.");
-} else { (dinero < totalCarrito )
-    alert("Su compra no incluye envío.");
-*/
-
-// 1) pedir el nombre al usuario 
-// 2) mostrar productos para que usuario seleccione 
-// 3) informar costo de envío
-// 4) Elegir métodos de pago
-
-/*
-
-function elegirMetodoPago() {
-    let metodoPago = prompt("Elija método de pago")
-
-    switch (metodoPago) {
-    case "efectivo":
-        console.log('Pagaste con ' + metodoPago );
-        break;
-    case "tarjeta":
-        console.log('Pagaste con ' + metodoPago );
-        break;
-    case "mercado pago":
-        console.log('Pagaste con '+ metodoPago);
-        break;
-    default:
-        console.log('No aceptamos '+ metodoPago);
-    }
-}
-
-function calcularTotalProducto() {
-        let producto = prompt("Ingrese el precio del producto");
-        let impuestos = "12";
-        let gastosEnvio = "800";
-        let total = (producto + impuestos + gastosEnvio);
-        alert("El precio total es de "+ total);
-        elegirMetodoPago();
-
-}
-
-*/
-
 
 function compraRealizada(total) {
     alert("Tu compra ha sido confirmada. El total es "+ total);
 }
 
+/*
+6) Debe seleccionar método de pago. 
+*/
 
 function elegirMetodoPago(total) {
     let metodoPago = prompt("Elija método de pago")
@@ -156,14 +30,22 @@ function elegirMetodoPago(total) {
     compraRealizada(total);
 }
 
-function confirmarClave(total,clave){
+/*
+5) Validar clave. 
+*/
+
+function confirmarClave(total,clave) {
         if (clave === "001200"){
-            alert('Bienvenido Roberto');
+            alert("Bienvenido Roberto");
         }else{
             alert("Contraseña incorrecta");
         }
         elegirMetodoPago(total);
 }
+
+/*
+4) Ingresar clave. 
+*/
 
 function ingresarClave(total,contraseña) {
     if(contraseña) {
@@ -174,10 +56,23 @@ function ingresarClave(total,contraseña) {
     }
 }
 
-function iniciarSesion(total,monto) {
-    let contraseña = confirm("Ingresar contraseña")
+/*
+3) Iniciar sesion. 
+*/
+
+function iniciarSesion(total) {
+    let contraseña = confirm("Iniciar sesion")
     ingresarClave(total,contraseña);
 }
+
+/*
+2) Seleccionar operacion. 
+Mostrar opciones: 
+a) Comprar ahora; b) Si selecciona comprar ahora, 
+deberá registrarse.
+a) Agregar al carrito; b) Si selecciona Agregar al carrito, 
+continúa seleccionando otro producto.
+*/
 
 function seleccionarOperacion(total) {
     console.log ("1: Comprar ahora");
@@ -187,7 +82,7 @@ function seleccionarOperacion(total) {
     switch(op){
         case "1":
            let monto = alert("Para continuar, deberás registrarte en tu cuenta");
-           iniciarSesion(total,monto);
+           iniciarSesion(total);
            break;
         case "2":
            let carrito = alert("Seleccionar otro producto");
@@ -199,8 +94,8 @@ function seleccionarOperacion(total) {
 }
 
 /*
-1) Seleccionar producto 
- */
+1) Seleccionar producto. Ingresar nombre y precio. Luego, muestra el total de la compra. 
+*/
 
 function seleccionarProducto() {
     let libro = prompt("Ingresar el nombre del libro");
@@ -213,4 +108,4 @@ function seleccionarProducto() {
     seleccionarOperacion(total);
 }
 
-seleccionarProducto()
+seleccionarProducto();
