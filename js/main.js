@@ -1,68 +1,77 @@
 
-/*
-7) Se informa la confirmación de la compra y se muestra el total.
-*/
-
-function compraRealizada(total) {
-    alert("Tu compra ha sido confirmada. El total es "+ total);
-}
-
-/*
-6) Debe seleccionar método de pago. 
-*/
-
-function elegirMetodoPago(total) {
-    let metodoPago = prompt("Elija método de pago")
-
-    switch (metodoPago) {
-    case "efectivo":
-        console.log('Pagaste con ' + metodoPago );
-        break;
-    case "tarjeta":
-        console.log('Pagaste con ' + metodoPago );
-        break;
-    case "mercado pago":
-        console.log('Pagaste con '+ metodoPago);
-        break;
-    default:
-        console.log('No aceptamos '+ metodoPago);
+//Lista de productos
+const listadoDeProductos = [ 
+    {
+        título: "Virginia Woolf",
+        precio: 6000,
+        id: 1
+    },
+    {
+        título: "Federico Garcia Lorca",
+        precio: 3000,
+        id: 2
+    },
+    {
+        título: "Silvina Ocampo",
+        precio: 1200,
+        id: 3
     }
-    compraRealizada(total);
+]; 
+
+// Mi carrito
+let carrito = [];
+
+let producto1 = {
+    título: "Virginia Woolf",
+    precio: 1000,
+    id: 1
 }
 
-/*
-5) Validar clave. 
-*/
-
-function confirmarClave(total,clave) {
-        if (clave === "001200"){
-            alert("Bienvenido Roberto");
-        }else{
-            alert("Contraseña incorrecta");
-        }
-        elegirMetodoPago(total);
+let producto2 = {
+    título: "Federico Garcia Lorca",
+    precio: 1000,
+    id: 2
 }
 
-/*
-4) Ingresar clave. 
-*/
-
-function ingresarClave(total,contraseña) {
-    if(contraseña) {
-        let clave = prompt("Ingresar contraseña");
-        confirmarClave(total,clave)
-    }else {
-        console.log("Es necesario ingresar una contraseña.")
-    }
+let producto3 = {
+    título: "Silvina Ocampo",
+    precio: 1000,
+    id: 3
 }
 
+
 /*
-3) Iniciar sesion. 
+1) Seleccionar producto. Ingresar nombre y precio. Luego, muestra el total de la compra. 
 */
 
-function iniciarSesion(total) {
-    let contraseña = confirm("Iniciar sesion")
-    ingresarClave(total,contraseña);
+function seleccionarProducto() {
+    let libro = parseInt(prompt("Ingresar el ID del libro"));
+    alert("Seleccionaste producto");
+    let producto = encontrarProducto(libro);
+    carrito.push(producto);
+    let totalProductos = calcularTotalCarrito();
+    let impuestos = 12;
+    let gastosEnvio = 800;
+    let total = totalProductos + impuestos + gastosEnvio;
+    alert("El precio total es de "+ total);
+    seleccionarOperacion(total);
+}
+
+seleccionarProducto();
+
+function calcularTotalCarrito() {
+    let totalCarrito = 0;
+    carrito.forEach((producto)=> {
+            totalCarrito = producto.precio + totalCarrito 
+    });   
+        return totalCarrito; 
+}
+
+function encontrarProducto(id) {
+    const encontrado = listadoDeProductos.find((producto) => {
+        return producto.id === id;
+    });
+    return encontrado;
 }
 
 /*
@@ -94,18 +103,67 @@ function seleccionarOperacion(total) {
 }
 
 /*
-1) Seleccionar producto. Ingresar nombre y precio. Luego, muestra el total de la compra. 
+3) Iniciar sesion. 
 */
 
-function seleccionarProducto() {
-    let libro = prompt("Ingresar el nombre del libro");
-    let precio = parseInt(prompt("Ingrese el precio del producto"));
-    alert("Seleccionaste producto");
-    let impuestos = 12;
-    let gastosEnvio = 800;
-    let total = precio + impuestos + gastosEnvio;
-    alert("El precio total es de "+ total);
-    seleccionarOperacion(total);
+function iniciarSesion(total) {
+    let contraseña = confirm("Iniciar sesion")
+    ingresarClave(total,contraseña);
 }
 
-seleccionarProducto();
+/*
+4) Ingresar clave. 
+*/
+
+function ingresarClave(total,contraseña) {
+    if(contraseña) {
+        let clave = prompt("Ingresar contraseña");
+        confirmarClave(total,clave)
+    }else {
+        console.log("Es necesario ingresar una contraseña.")
+    }
+}
+
+/*
+5) Validar clave. 
+*/
+
+function confirmarClave(total,clave) {
+    if (clave === "001200"){
+        alert("Bienvenido Roberto");
+    }else{
+        alert("Contraseña incorrecta");
+    }
+    elegirMetodoPago(total);
+}
+
+/*
+6) Debe seleccionar método de pago. 
+*/
+
+function elegirMetodoPago(total) {
+    let metodoPago = prompt("Elija método de pago")
+
+    switch (metodoPago) {
+    case "efectivo":
+        console.log('Pagaste con ' + metodoPago );
+        break;
+    case "tarjeta":
+        console.log('Pagaste con ' + metodoPago );
+        break;
+    case "mercado pago":
+        console.log('Pagaste con '+ metodoPago);
+        break;
+    default:
+        console.log('No aceptamos '+ metodoPago);
+    }
+    compraRealizada(total);
+}
+
+/*
+7) Se informa la confirmación de la compra y se muestra el total.
+*/
+
+function compraRealizada(total) {
+    alert("Tu compra ha sido confirmada. El total es "+ total);
+}

@@ -50,7 +50,44 @@
         </div>
       </nav>
     </header>
-    <main></main>
+    <main class="main-contact">
+      <h2 class="tittle">Contacto</h2>
+      <div>
+        <p class="info">E-mail: consultaslibreria@gmail.com</p>
+        <p class="info">Teléfonos: 0362 234567 - 229090</p>
+        <p class="info">Resistencia - Chaco</p>
+      </div>        
+      <!-- contact form -->  
+      <form class="contact-form" action="#">
+        <div>
+          <fieldset class="fieldset-w">
+            <span>* Datos requeridos</span>
+            <div class="contact-div">
+              <label for="nombre">Nombres:</label>
+              <input type="text" name="nombre" 
+                  placeholder="Nombres" required />
+            </div>
+            <div class="contact-div">
+              <label for="email">Email:</label>
+              <input type="email" name="email" 
+                  placeholder="mariagomez@email.com" required />
+            </div>
+            <div class="contact-div">
+              <label for="website">Sitio web:</label>
+              <input type="url" name="website" 
+                  placeholder="https://www.mariagomez.com" 
+                  required pattern="(http|https)://.+" />
+            </div>
+            <div class="contact-div">
+              <label for="message">Mensaje:</label>
+              <textarea name="message" 
+                cols="40" rows="15" required></textarea>
+            </div>
+            <button class="submit" type="submit">Enviar</button>
+          </fieldset>
+        </div>
+      </form>
+    </main>     
     <footer>
         <p class="description">2022 © All Rights Reserved</p>
     </footer>
