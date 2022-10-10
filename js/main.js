@@ -41,7 +41,7 @@ let producto3 = {
 
 
 /*
-1) Seleccionar producto. Ingresar nombre y precio. Luego, muestra el total de la compra. 
+1) Seleccionar producto. Ingresar id del producto.
 */
 
 function seleccionarProducto() {
