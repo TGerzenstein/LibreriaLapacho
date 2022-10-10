@@ -8,7 +8,7 @@ header {
     font-family: 'Raleway', sans-serif; }
 
 .main-index .box-1 .imagen {
-  background-image: url("/img/front.jpg");
+  background-image: url("/img/RosaLapacho.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 72vh; }
@@ -24,42 +24,9 @@ header {
   letter-spacing: 0.125rem;
   padding-bottom: 1rem; }
 
-.main-index .boxes-2 {
-  display: flex;
-  flex-direction: row;
-  font-family: 'Merriweather', sans-serif;
-  margin: 1rem 2.188rem 5rem; }
-  .main-index .boxes-2 .box1 {
-    background-color: #fff;
-    color: #F2C49B;
-    font-size: 5rem;
-    width: 15%;
-    height: 60%;
-    padding-top: 1.90rem;
-    padding-left: 2.188rem;
-    padding-right: 0.10rem;
-    text-align: center;
-    margin: 1rem 0rem; }
-    .main-index .boxes-2 .box1 .second-box {
-      color: #BF8969;
-      font-weight: 700;
-      font-size: 1.25rem; }
-  .main-index .boxes-2 .box2 {
-    background-color: #fff;
-    color: black;
-    text-align: start;
-    font-size: 1.375rem;
-    padding: 4.688rem 0rem 0rem;
-    width: 25%;
-    height: 60%; }
-    .main-index .boxes-2 .box2 .second-box {
-      color: #BF8969;
-      font-weight: 700;
-      font-size: 1.25rem; }
-
 .main-index .med-p {
   background-color: #000;
-  padding: 1rem; }
+  padding: 0.65rem; }
   .main-index .med-p .med-text {
     font-family: 'Merriweather', sans-serif;
     font-size: 4.375rem;
@@ -75,19 +42,19 @@ header {
   justify-content: space-evenly;
   margin: 2rem 0rem; }
   .main-index .boxes-texts .box1-tex {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     color: #000;
     width: 15%;
     height: 60%;
     padding: 2rem 0.80rem; }
   .main-index .boxes-texts .box2-tex {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     color: #000;
     width: 15%;
     height: 60%;
     padding: 2rem 0.80rem; }
   .main-index .boxes-texts .box3-tex {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     color: #000;
     width: 15%;
     height: 60%;
@@ -108,7 +75,8 @@ header {
   border-color: #9CBF4E; }
 
 .main-contact {
-  color: black; }
+  color: black;
+  font-family: 'Raleway', sans-serif; }
   .main-contact .tittle {
     padding: 3.125rem 3.125rem 1.50rem;
     margin: 0.625rem 2.50rem;
@@ -145,14 +113,14 @@ header {
       font-weight: 600;
       font-size: 0.938rem;
       color: white;
-      background-color: grey;
+      background-color: #9CBF4E;
       border-radius: 0.625rem;
-      border: 0.063rem solid black;
+      border: 0.063rem solid #9CBF4E;
       transition: all 1s ease;
       -webkit-transition: all 1s ease; }
       .main-contact .contact-form .fieldset-w .submit:hover {
-        color: grey;
-        background-color: #ffffff;
+        color: white;
+        background-color: grey;
         cursor: pointer; }
 
 footer {
