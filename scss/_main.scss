@@ -1,24 +1,21 @@
-
-@mixin st-boxes {
-    color: $color-primario;
-    font-weight: 700;
-    font-size: 1.25rem;
-}
-
 @mixin boxes-t {
             font-family: $fuente-primaria;
             color: #000;
-            width: 15%;
-            height: 60%;
-            padding: 2rem 0.80rem;
+            width: 35%;
+            padding: 1rem 0.30rem;
+            margin: 4rem;
+}
+
+@mixin title-book {
+      font-size: 23px;
+      padding-top: 1rem;
 }
 
 @mixin subtittle {
-            font-family: 'Raleway', sans-serif;
-            font-style: italic;
-            color: $color-primario;
+        font-family: 'Raleway', sans-serif;
+        font-style: italic;
+        color: $color-primario;
 }
-
 
 .main-index {
 
@@ -45,16 +42,16 @@
     }   
 
     .med-p {
-        background-color: #000;
+        background-color: #029cb2;
         padding: 0.65rem;
 
         .med-text {
             font-family: 'Merriweather', sans-serif;
-            font-size: 4.375rem;
+            font-size: 2.50rem;
             font-weight: 900;
             letter-spacing: 0.125rem;
             color: $color-fondo;
-            padding: 11rem 1rem 1rem;
+            padding: 2rem 1rem;
             text-align: center;
         }
     }
@@ -67,14 +64,62 @@
 
         .box1-tex {
             @include boxes-t;
+
+            .img-box1 {
+                background-image: url("/img/VirginiaWoolf.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 70vh;  
+            }
+
+            .book {
+                @include title-book;
+            }
+
+            .author{
+              color: #029cb2;
+              font-size: 16px;
+            }
         }
 
         .box2-tex {
             @include boxes-t;
+
+            .img-box2 {
+                background-image: url("/img/FedericoGarciaLorca.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 70vh;  
+            }
+
+            .book {
+                @include title-book;
+            }
+
+            .author{
+                color: #029cb2;
+                font-size: 16px;
+            }
         }
 
         .box3-tex {
              @include boxes-t;
+
+            .img-box3 {
+                background-image: url("/img/SilvinaOcampo.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 70vh;  
+            }
+
+            .book {
+                @include title-book;
+            }
+
+            .author{
+                color: #029cb2;
+                font-size: 16px;
+            }
         }
     }
 }

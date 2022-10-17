@@ -25,15 +25,15 @@ header {
   padding-bottom: 1rem; }
 
 .main-index .med-p {
-  background-color: #000;
+  background-color: #029cb2;
   padding: 0.65rem; }
   .main-index .med-p .med-text {
     font-family: 'Merriweather', sans-serif;
-    font-size: 4.375rem;
+    font-size: 2.50rem;
     font-weight: 900;
     letter-spacing: 0.125rem;
     color: #fff;
-    padding: 11rem 1rem 1rem;
+    padding: 2rem 1rem;
     text-align: center; }
 
 .main-index .boxes-texts {
@@ -44,21 +44,54 @@ header {
   .main-index .boxes-texts .box1-tex {
     font-family: "Raleway", sans-serif;
     color: #000;
-    width: 15%;
-    height: 60%;
-    padding: 2rem 0.80rem; }
+    width: 35%;
+    padding: 1rem 0.30rem;
+    margin: 4rem; }
+    .main-index .boxes-texts .box1-tex .img-box1 {
+      background-image: url("/img/VirginiaWoolf.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 70vh; }
+    .main-index .boxes-texts .box1-tex .book {
+      font-size: 23px;
+      padding-top: 1rem; }
+    .main-index .boxes-texts .box1-tex .author {
+      color: #029cb2;
+      font-size: 16px; }
   .main-index .boxes-texts .box2-tex {
     font-family: "Raleway", sans-serif;
     color: #000;
-    width: 15%;
-    height: 60%;
-    padding: 2rem 0.80rem; }
+    width: 35%;
+    padding: 1rem 0.30rem;
+    margin: 4rem; }
+    .main-index .boxes-texts .box2-tex .img-box2 {
+      background-image: url("/img/FedericoGarciaLorca.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 70vh; }
+    .main-index .boxes-texts .box2-tex .book {
+      font-size: 23px;
+      padding-top: 1rem; }
+    .main-index .boxes-texts .box2-tex .author {
+      color: #029cb2;
+      font-size: 16px; }
   .main-index .boxes-texts .box3-tex {
     font-family: "Raleway", sans-serif;
     color: #000;
-    width: 15%;
-    height: 60%;
-    padding: 2rem 0.80rem; }
+    width: 35%;
+    padding: 1rem 0.30rem;
+    margin: 4rem; }
+    .main-index .boxes-texts .box3-tex .img-box3 {
+      background-image: url("/img/SilvinaOcampo.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 70vh; }
+    .main-index .boxes-texts .box3-tex .book {
+      font-size: 23px;
+      padding-top: 1rem; }
+    .main-index .boxes-texts .box3-tex .author {
+      color: #029cb2;
+      font-size: 16px; }
 
 .main-aves .clas-birds {
   display: flex;
