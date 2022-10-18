@@ -117,7 +117,7 @@ header {
   .main-contact .info {
     padding: 0.080rem 3.125rem;
     margin: 0.125rem 2.50rem;
-    width: 30%; }
+    width: 40%; }
   .main-contact .contact-form {
     width: 30%;
     height: 45%;
@@ -157,12 +157,14 @@ header {
         cursor: pointer; }
 
 footer {
-  background-color: black;
-  padding: 8rem 0rem 1rem;
+  background-color: #e9ecef;
+  padding: 2.70rem 0rem 2rem;
   margin: 1rem 0rem 0rem;
   font-family: 'Raleway', sans-serif; }
+  footer ul li {
+    list-style: none; }
   footer .description {
-    color: gainsboro;
+    color: #000;
     text-align: center; }
 
 body {
