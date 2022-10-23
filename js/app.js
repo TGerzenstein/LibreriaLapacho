@@ -81,4 +81,4 @@ function updateOrder(total) {
     carTotalprod.innerHTML = output;
 };
 
-initShop()
+initShop();
