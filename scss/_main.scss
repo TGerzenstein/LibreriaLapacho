@@ -132,20 +132,41 @@
         justify-content: space-evenly;
         flex-wrap: wrap;
         
-    }
-
-    .card {
+        .card {
         
-        .card-text {
-            color: grey;  
-        }
-
-        .btn-primary {
-            color:#fff;
-            background-color: #9CBF4E;
-            border-color: #9CBF4E;
-        }
+            .card-text {
+                color: grey;  
+            }
+    
+            .btn-primary {
+                color:#fff;
+                background-color: #9CBF4E;
+                border-color: #9CBF4E;
+            }
+        }    
     }
+
+    .checkOut {
+
+        .container {
+            margin: 2rem 3.60rem;
+
+            .row {
+                display: flex;
+                margin: 0.50rem;
+
+                .col-50 {
+                    padding: 10px 30px; 
+                    width: 60%;
+
+                    .label-checkOut {
+                        display: flex;
+                        padding: 8px 0px; 
+                    }
+                }
+            }
+        }
+    }   
 }
 
 .main-contact {
