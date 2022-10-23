@@ -21,31 +21,12 @@ const listadoDeProductos = [
 // Mi carrito
 let carrito = [];
 
-let producto1 = {
-    título: "Virginia Woolf",
-    precio: 1000,
-    id: 1
-}
-
-let producto2 = {
-    título: "Federico Garcia Lorca",
-    precio: 1000,
-    id: 2
-}
-
-let producto3 = {
-    título: "Silvina Ocampo",
-    precio: 1000,
-    id: 3
-}
-
-
 /*
 1) Seleccionar producto. Ingresar id del producto.
 */
 
 function seleccionarProducto() {
-    let libro = parseInt(prompt("Ingresar el ID del libro"));
+    let libro = parseInt(prompt("Ingresar ID del libro = Virginia Woolf - Id: 1 , Federico G Lorca - Id: 2 , Silvina Ocampo - Id: 3"));
     alert("Seleccionaste producto");
     let producto = encontrarProducto(libro);
     carrito.push(producto);
@@ -107,21 +88,39 @@ function seleccionarOperacion(total) {
 */
 
 function iniciarSesion(total) {
-    let contraseña = confirm("Iniciar sesion")
-    ingresarClave(total,contraseña);
+    let correo = confirm("Iniciar sesion")
+    //ingresarClave(total,contraseña);
+    ingresarEmail(total,correo)
 }
 
 /*
 4) Ingresar clave. 
 */
+function ingresarEmail(total,correo) {
+    if (correo) {
+       let email = prompt("Ingresar e-mail");
+       confirmarEmail(total,email);
+    } else {
+        console.log("Es necesario ingresar una dirección de e-mail");
+    }
+}
 
-function ingresarClave(total,contraseña) {
-    if(contraseña) {
+function confirmarEmail(total,email) {
+        if (email === "robertovez@gmail.com"){
+            alert("Ahora deberás ingresar una contraseña");
+        }else{
+            alert("Correo incorrecto");
+        }
+    ingresarClave(total,email);
+}
+
+function ingresarClave(total,email) {
+    if(email) {
         let clave = prompt("Ingresar contraseña");
         confirmarClave(total,clave)
     }else {
-        console.log("Es necesario ingresar una contraseña.")
-    }
+        console.log("Es necesario ingresar una contraseña.");
+    } 
 }
 
 /*
@@ -142,7 +141,7 @@ function confirmarClave(total,clave) {
 */
 
 function elegirMetodoPago(total) {
-    let metodoPago = prompt("Elija método de pago")
+    let metodoPago = prompt("Elija método de pago: 1 = efectivo, 2 = tarjeta, 3 = mercado pago")
 
     switch (metodoPago) {
     case "efectivo":
