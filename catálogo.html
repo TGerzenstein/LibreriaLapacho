@@ -98,9 +98,9 @@
         </div>
       <!-- CheckOut -->
         <div class="checkOut">
-          <h5>Check Out</h5>
+          <h5 class="checkOutTitle">Check Out</h5>
           <form action="#">
-          <div class="container">  
+            <div class="container">  
             <div class="row">
               <div class="col-50">
                 <h3>Dirección de envío</h3>
@@ -125,12 +125,12 @@
               </div>
               <div class="col-50">
                 <h3>Pago</h3>
-                <label for="fname">Datos de la tarjeta</label>
-                <label for="cname">Titular de la tarjeta</label>
+                <label for="fname"></label>
+                <label for="cname" class="label-pay">Titular de la tarjeta</label>
                 <input type="text" id="cname" name="cardname" placeholder="ANTONI ANDREA">
-                <label for="ccnum">Número de la tarjeta</label>
+                <label for="ccnum" class="label-pay">Número de la tarjeta</label>
                 <input type="text" id="ccnum" name="cardnumber" placeholder="000-3333222-1111">
-                <label for="expmonth">Mes de exp</label>
+                <label for="expmonth" class="label-pay">Mes de exp</label>
                 <input type="text" id="expmonth" name="expmonth" placeholder="Marzo">
                 <div class="row">
                   <div class="col-50">
@@ -143,21 +143,21 @@
                   </div>
                 </div>
               </div>    
-            </div>
-            <label>
+              </div>
+              <label>
               <input type="checkbox" 
-              checked="checked" 
-              name="sameadr">La dirección de envío es la de facturación
-            </label>
-            <input type="submit" value="Continue to checkout" class="btn">
-            <button type="submit">Continuar</button>
-            <button type="submit">Volver al carrito</button>
-          </div>
-          <div class="shop-order">
-            <h5 class="order-title">Orden de compra</h5>
-            <div id="shop-box-list">
+                checked="checked" 
+                name="sameadr">La dirección de envío es la de facturación
+              </label>
+              <input type="submit" value="Continue to checkout" class="btn">
+              <button type="submit">Continuar</button>
+              <button type="submit">Volver al carrito</button>
             </div>
-          </div>
+            <div class="shop-order">
+              <h5 class="order-title">Orden de compra</h5>
+              <div id="shop-box-list">
+              </div>
+            </div>
           </form>
         </div>
     </main>

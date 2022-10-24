@@ -172,6 +172,13 @@
 
     .checkOut {
 
+        .checkOutTitle {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.75rem;
+            padding-left: 6.40rem;
+            margin: 5rem 0rem 1rem;
+        }
+
         .container {
             margin: 2rem 3.60rem;
 
@@ -182,11 +189,17 @@
                 .col-50 {
                     padding: 10px 30px; 
                     width: 60%;
+                    font-family: 'Raleway', sans-serif;
 
                     .label-checkOut {
                         display: flex;
                         padding: 8px 0px; 
                     }
+                }
+
+                .label-pay {
+                    display: flex;
+                    padding: 8px 0px; 
                 }
             }
         }
