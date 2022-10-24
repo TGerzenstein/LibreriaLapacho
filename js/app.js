@@ -28,24 +28,33 @@ function addToCart(event) {
 
 function initShop() {
     let totalProductos = calcularTotalCarrito();
-    let impuestos = 12;
-    let gastosEnvio = 800;
-    let total = totalProductos + impuestos + gastosEnvio;
+    let additional = 0;
+    if (totalProductos > 0) {
+        let impuestos = 12;
+        let gastosEnvio = 800;
+        additional = impuestos + gastosEnvio;    
+    }
+    let total = totalProductos + additional;
     const carTotalelement = document.getElementById("cart-total");
     carTotalelement.innerHTML = total;
+    updateOrder(total);
 };
 
 function seleccionarProducto(libro) {
     let producto = encontrarProducto(libro);
     carrito.push(producto);
     let totalProductos = calcularTotalCarrito();
-    let impuestos = 12;
-    let gastosEnvio = 800;
-    let total = totalProductos + impuestos + gastosEnvio;
+    let additional = 0;
+    if (totalProductos > 0) {
+        let impuestos = 12;
+        let gastosEnvio = 800;
+        additional = impuestos + gastosEnvio;    
+    }
+    let total = totalProductos + additional;
     const carTotalelement = document.getElementById("cart-total");
     carTotalelement.innerHTML = total;
     updateOrder(total);
-    localStorage.setItem('myapp_cart', JSON.stringify(productList));
+    localStorage.setItem('myapp_cart', JSON.stringify(carrito));
 };
 
 function calcularTotalCarrito() {
@@ -64,15 +73,13 @@ function encontrarProducto(id) {
 };
 
 function updateOrder(total) {
-    let ladrillo = '<div class="shop-box1">' +
-    '<p>Un cuarto propio - Virginia Woolf</p>' +
-    '<p>$ 6000</p>' +
-  '</div>';
+   
     let output = '' 
     carrito.forEach((producto) => {
          output += '<div class="shop-box1">' +
     '<p>'+ producto.title +'</p>' +
     '<p>'+ producto.precio +'</p>' + 
+    '<button id="delproduct-'+ producto.id +'" class="remove-from-cart">Eliminar</button>' +
   '</div>';
     })
     output += '<p>'+ total +'</p>';
@@ -82,3 +89,34 @@ function updateOrder(total) {
 };
 
 initShop();
+
+
+const quitToCartBtn = Array.from(document.getElementsByClassName("remove-from-cart"))
+console.log(quitToCartBtn);
+quitToCartBtn.forEach(element => {
+    element.addEventListener("click", deleteProducts)
+});
+
+function deleteProducts(event) {
+    event.preventDefault()
+    let prodId = this.id.split("-")
+    prodId = parseInt(prodId[1]); 
+    let remove = carrito.findIndex(elements => elements.id === prodId);
+    carrito.splice(remove);
+    let totalProductos = calcularTotalCarrito();
+    let additional = 0;
+    if (totalProductos > 0) {
+        let impuestos = 12;
+        let gastosEnvio = 800;
+        additional = impuestos + gastosEnvio;    
+    }
+    let total = totalProductos + additional;
+    const carTotalelement = document.getElementById("cart-total");
+    carTotalelement.innerHTML = total;
+    updateOrder(total);
+    localStorage.setItem('myapp_cart', JSON.stringify(carrito));
+};
+
+
+
+
