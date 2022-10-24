@@ -24,6 +24,8 @@ function addToCart(event) {
     prodId = parseInt(prodId[1]); 
     console.log(prodId);
     seleccionarProducto(prodId);
+    const newDeleteElement = document.getElementById('delproduct-' + prodId)
+    newDeleteElement.addEventListener("click", deleteProducts)
 };
 
 function initShop() {
