@@ -1,9 +1,10 @@
 @mixin boxes-t {
             font-family: $fuente-primaria;
             color: #000;
-            width: 35%;
+            width: 25%;
+            height: 100%;
             padding: 1rem 0.30rem;
-            margin: 4rem;
+            margin: 1rem 1rem;
 }
 
 @mixin title-book {
@@ -58,9 +59,9 @@
 
     .boxes-texts {
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-evenly;
-        margin: 2rem 0rem;
+        margin: 4rem 0rem 2rem;
 
         .box1-tex {
             @include boxes-t;
@@ -69,7 +70,7 @@
                 background-image: url("/img/VirginiaWoolf.png");
                 background-repeat: no-repeat;
                 background-size: cover;
-                height: 70vh;  
+                height: 75vh;  
             }
 
             .book {
@@ -89,7 +90,7 @@
                 background-image: url("/img/FedericoGarciaLorca.png");
                 background-repeat: no-repeat;
                 background-size: cover;
-                height: 70vh;  
+                height: 75vh;  
             }
 
             .book {
@@ -109,7 +110,67 @@
                 background-image: url("/img/SilvinaOcampo.png");
                 background-repeat: no-repeat;
                 background-size: cover;
-                height: 70vh;  
+                height: 75vh;  
+            }
+
+            .book {
+                @include title-book;
+            }
+
+            .author{
+                color: #029cb2;
+                font-size: 16px;
+            }
+        }
+
+        .box4-tex {
+            @include boxes-t();
+
+            .img-box4 {
+                background-image: url("/img/OlgaOrozco.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75vh;  
+            }
+
+            .book {
+                @include title-book;
+            }
+
+            .author{
+                color: #029cb2;
+                font-size: 16px;
+            }
+        }
+
+        .box5-tex {
+            @include boxes-t();
+
+            .img-box5 {
+                background-image: url("/img/OrlandoVirginiaWoolf.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75vh;  
+            }
+
+            .book {
+                @include title-book;
+            }
+
+            .author{
+                color: #029cb2;
+                font-size: 16px;
+            }
+        }
+
+        .box6-tex {
+            @include boxes-t();
+
+            .img-box6 {
+                background-image: url("/img/JLBorges.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75vh;  
             }
 
             .book {

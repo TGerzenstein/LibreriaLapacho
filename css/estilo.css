@@ -38,20 +38,21 @@ header {
 
 .main-index .boxes-texts {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 2rem 0rem; }
+  margin: 4rem 0rem 2rem; }
   .main-index .boxes-texts .box1-tex {
     font-family: "Raleway", sans-serif;
     color: #000;
-    width: 35%;
+    width: 25%;
+    height: 100%;
     padding: 1rem 0.30rem;
-    margin: 4rem; }
+    margin: 1rem 1rem; }
     .main-index .boxes-texts .box1-tex .img-box1 {
       background-image: url("/img/VirginiaWoolf.png");
       background-repeat: no-repeat;
       background-size: cover;
-      height: 70vh; }
+      height: 75vh; }
     .main-index .boxes-texts .box1-tex .book {
       font-size: 23px;
       padding-top: 1rem; }
@@ -61,14 +62,15 @@ header {
   .main-index .boxes-texts .box2-tex {
     font-family: "Raleway", sans-serif;
     color: #000;
-    width: 35%;
+    width: 25%;
+    height: 100%;
     padding: 1rem 0.30rem;
-    margin: 4rem; }
+    margin: 1rem 1rem; }
     .main-index .boxes-texts .box2-tex .img-box2 {
       background-image: url("/img/FedericoGarciaLorca.png");
       background-repeat: no-repeat;
       background-size: cover;
-      height: 70vh; }
+      height: 75vh; }
     .main-index .boxes-texts .box2-tex .book {
       font-size: 23px;
       padding-top: 1rem; }
@@ -78,18 +80,73 @@ header {
   .main-index .boxes-texts .box3-tex {
     font-family: "Raleway", sans-serif;
     color: #000;
-    width: 35%;
+    width: 25%;
+    height: 100%;
     padding: 1rem 0.30rem;
-    margin: 4rem; }
+    margin: 1rem 1rem; }
     .main-index .boxes-texts .box3-tex .img-box3 {
       background-image: url("/img/SilvinaOcampo.png");
       background-repeat: no-repeat;
       background-size: cover;
-      height: 70vh; }
+      height: 75vh; }
     .main-index .boxes-texts .box3-tex .book {
       font-size: 23px;
       padding-top: 1rem; }
     .main-index .boxes-texts .box3-tex .author {
+      color: #029cb2;
+      font-size: 16px; }
+  .main-index .boxes-texts .box4-tex {
+    font-family: "Raleway", sans-serif;
+    color: #000;
+    width: 25%;
+    height: 100%;
+    padding: 1rem 0.30rem;
+    margin: 1rem 1rem; }
+    .main-index .boxes-texts .box4-tex .img-box4 {
+      background-image: url("/img/OlgaOrozco.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 75vh; }
+    .main-index .boxes-texts .box4-tex .book {
+      font-size: 23px;
+      padding-top: 1rem; }
+    .main-index .boxes-texts .box4-tex .author {
+      color: #029cb2;
+      font-size: 16px; }
+  .main-index .boxes-texts .box5-tex {
+    font-family: "Raleway", sans-serif;
+    color: #000;
+    width: 25%;
+    height: 100%;
+    padding: 1rem 0.30rem;
+    margin: 1rem 1rem; }
+    .main-index .boxes-texts .box5-tex .img-box5 {
+      background-image: url("/img/OrlandoVirginiaWoolf.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 75vh; }
+    .main-index .boxes-texts .box5-tex .book {
+      font-size: 23px;
+      padding-top: 1rem; }
+    .main-index .boxes-texts .box5-tex .author {
+      color: #029cb2;
+      font-size: 16px; }
+  .main-index .boxes-texts .box6-tex {
+    font-family: "Raleway", sans-serif;
+    color: #000;
+    width: 25%;
+    height: 100%;
+    padding: 1rem 0.30rem;
+    margin: 1rem 1rem; }
+    .main-index .boxes-texts .box6-tex .img-box6 {
+      background-image: url("/img/JLBorges.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 75vh; }
+    .main-index .boxes-texts .box6-tex .book {
+      font-size: 23px;
+      padding-top: 1rem; }
+    .main-index .boxes-texts .box6-tex .author {
       color: #029cb2;
       font-size: 16px; }
 
