@@ -19,80 +19,83 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">logo</a>
-          <button class="navbar-toggler" type="button" 
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-                  aria-controls="navbarSupportedContent" aria-expanded="false" 
-                  aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" 
-                     href="/index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/catálogo.html">Catálogo</a>
-                </li>
-              </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Título, autor" aria-label="Search">
-                  <button class="btn btn-outline-success" 
+  <header>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">logo</a>
+        <button class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" 
+                  href="/index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/catálogo.html">Catálogo</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" 
+            placeholder="Título, autor" aria-label="Search">
+            <button class="btn btn-outline-success" 
                     type="submit">Search</button>
-                </form>
-          </div>
+          </form>
         </div>
-      </nav>
-    </header>
-    <main class="main-contact">
-      <h2 class="tittle">Contacto</h2>
+      </div>
+    </nav>
+  </header>
+  <main class="main-contact">
+    <h2 class="tittle">Contacto</h2>
+    <div>
+      <p class="info">E-mail: consultaslibrerialapacho@gmail.com</p>
+      <p class="info">Teléfonos: 0362 234567 - 229090</p>
+      <p class="info">Resistencia - Chaco</p>
+    </div>        
+    <!-- contact form -->  
+    <form class="contact-form" action="#">
       <div>
-        <p class="info">E-mail: consultaslibrerialapacho@gmail.com</p>
-        <p class="info">Teléfonos: 0362 234567 - 229090</p>
-        <p class="info">Resistencia - Chaco</p>
-      </div>        
-      <!-- contact form -->  
-      <form class="contact-form" action="#">
-        <div>
-          <fieldset class="fieldset-w">
-            <span>* Datos requeridos</span>
-            <div class="contact-div">
-              <label for="nombre">Nombres:</label>
-              <input type="text" name="nombre" 
+        <fieldset class="fieldset-w">
+          <span>* Datos requeridos</span>
+          <div class="contact-div">
+            <label for="nombre">Nombres:</label>
+            <input type="text" name="nombre" 
                   placeholder="Nombres" required />
-            </div>
-            <div class="contact-div">
-              <label for="email">Email:</label>
-              <input type="email" name="email" 
+          </div>
+          <div class="contact-div">
+            <label for="email">Email:</label>
+            <input type="email" name="email" 
                   placeholder="mariagomez@email.com" required />
-            </div>
-            <div class="contact-div">
-              <label for="website">Sitio web:</label>
-              <input type="url" name="website" 
+          </div>
+          <div class="contact-div">
+            <label for="website">Sitio web:</label>
+            <input type="url" name="website" 
                   placeholder="https://www.mariagomez.com" 
                   required pattern="(http|https)://.+" />
-            </div>
-            <div class="contact-div">
-              <label for="message">Mensaje:</label>
-              <textarea name="message" 
+          </div>
+          <div class="contact-div">
+            <label for="message">Mensaje:</label>
+            <textarea name="message" 
                 cols="40" rows="15" required></textarea>
-            </div>
-            <button class="submit" type="submit">Enviar</button>
-          </fieldset>
-        </div>
-      </form>
-    </main>     
-    <footer>
-        <ul>
-          <li>consultaslibrerialapacho@gmail.com</li>
-          <li>0362 234567 - 229090</li>
-          <li>Resistencia - Chaco, Argentina</li>
-        </ul>
-        <p class="description">2022 © All Rights Reserved</p>
-    </footer>
+          </div>
+          <button class="submit" type="submit">Enviar</button>
+        </fieldset>
+      </div>
+    </form>
+  </main>     
+  <footer>
+    <ul>
+      <li>consultaslibrerialapacho@gmail.com</li>
+      <li>0362 234567 - 229090</li>
+      <li>Resistencia - Chaco, Argentina</li>
+    </ul>
+    <p class="description">2022 © All Rights Reserved</p>
+  </footer>
 </body>
 </html>

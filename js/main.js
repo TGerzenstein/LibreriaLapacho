@@ -75,7 +75,7 @@ function seleccionarOperacion(total) {
            iniciarSesion(total);
            break;
         case "2":
-           let carrito = alert("Seleccionar otro producto");
+           let carroSeleccion = alert("Seleccionar otro producto");
            seleccionarProducto();
            break;
         default:
