@@ -19,8 +19,8 @@ addToCartBtn.forEach(element => {
 });
 
 function addToCart(event) {
-    event.preventDefault()
-    let prodId = this.id.split("-")
+    event.preventDefault();
+    let prodId = this.id.split("-");
     prodId = parseInt(prodId[1]); 
     console.log(prodId);
     seleccionarProducto(prodId);
@@ -40,11 +40,14 @@ function initShop() {
     const carTotalelement = document.getElementById("cart-total");
     carTotalelement.innerHTML = total;
     updateOrder(total);
+    initShop();
 };
 
-function seleccionarProducto(libro) {
-    let producto = encontrarProducto(libro);
-    carrito.push(producto);
+//cambié parámetro libro por ID; 
+
+function seleccionarProducto(id) {
+    let producto = encontrarProducto(id);
+    carrito.push(producto)
     let totalProductos = calcularTotalCarrito();
     let additional = 0;
     if (totalProductos > 0) {
@@ -61,7 +64,7 @@ function seleccionarProducto(libro) {
 
 function calcularTotalCarrito() {
     let totalCarrito = 0;
-    carrito.forEach((producto)=> {
+    carrito.forEach((producto) => {
             totalCarrito = producto.precio + totalCarrito 
     });   
         return totalCarrito; 
@@ -83,15 +86,12 @@ function updateOrder(total) {
     '<p>'+ producto.precio +'</p>' + 
     '<button id="delproduct-'+ producto.id +'" class="remove-from-cart">Eliminar</button>' +
   '</div>';
-    })
+    });
     output += '<p>'+ total +'</p>';
     console.log(output);
     let carTotalprod = document.getElementById("shop-box-list");
     carTotalprod.innerHTML = output;
 };
-
-initShop();
-
 
 const quitToCartBtn = Array.from(document.getElementsByClassName("remove-from-cart"))
 console.log(quitToCartBtn);
@@ -118,7 +118,3 @@ function deleteProducts(event) {
     updateOrder(total);
     localStorage.setItem('myapp_cart', JSON.stringify(carrito));
 };
-
-
-
-

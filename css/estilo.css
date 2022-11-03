@@ -54,11 +54,11 @@ header {
       background-size: cover;
       height: 75vh; }
     .main-index .boxes-texts .box1-tex .book {
-      font-size: 23px;
+      font-size: 1.438rem;
       padding-top: 1rem; }
     .main-index .boxes-texts .box1-tex .author {
       color: #029cb2;
-      font-size: 16px; }
+      font-size: 1rem; }
   .main-index .boxes-texts .box2-tex {
     font-family: "Raleway", sans-serif;
     color: #000;
@@ -72,11 +72,11 @@ header {
       background-size: cover;
       height: 75vh; }
     .main-index .boxes-texts .box2-tex .book {
-      font-size: 23px;
+      font-size: 1.438rem;
       padding-top: 1rem; }
     .main-index .boxes-texts .box2-tex .author {
       color: #029cb2;
-      font-size: 16px; }
+      font-size: 1rem; }
   .main-index .boxes-texts .box3-tex {
     font-family: "Raleway", sans-serif;
     color: #000;
@@ -90,11 +90,11 @@ header {
       background-size: cover;
       height: 75vh; }
     .main-index .boxes-texts .box3-tex .book {
-      font-size: 23px;
+      font-size: 1.438rem;
       padding-top: 1rem; }
     .main-index .boxes-texts .box3-tex .author {
       color: #029cb2;
-      font-size: 16px; }
+      font-size: 1rem; }
   .main-index .boxes-texts .box4-tex {
     font-family: "Raleway", sans-serif;
     color: #000;
@@ -108,11 +108,11 @@ header {
       background-size: cover;
       height: 75vh; }
     .main-index .boxes-texts .box4-tex .book {
-      font-size: 23px;
+      font-size: 1.438rem;
       padding-top: 1rem; }
     .main-index .boxes-texts .box4-tex .author {
       color: #029cb2;
-      font-size: 16px; }
+      font-size: 1rem; }
   .main-index .boxes-texts .box5-tex {
     font-family: "Raleway", sans-serif;
     color: #000;
@@ -126,11 +126,11 @@ header {
       background-size: cover;
       height: 75vh; }
     .main-index .boxes-texts .box5-tex .book {
-      font-size: 23px;
+      font-size: 1.438rem;
       padding-top: 1rem; }
     .main-index .boxes-texts .box5-tex .author {
       color: #029cb2;
-      font-size: 16px; }
+      font-size: 1rem; }
   .main-index .boxes-texts .box6-tex {
     font-family: "Raleway", sans-serif;
     color: #000;
@@ -144,11 +144,11 @@ header {
       background-size: cover;
       height: 75vh; }
     .main-index .boxes-texts .box6-tex .book {
-      font-size: 23px;
+      font-size: 1.438rem;
       padding-top: 1rem; }
     .main-index .boxes-texts .box6-tex .author {
       color: #029cb2;
-      font-size: 16px; }
+      font-size: 1rem; }
 
 .main-aves .shop-res {
   background-color: #e9ecef;
@@ -156,12 +156,10 @@ header {
   margin: 2rem 3rem 6rem 5rem;
   width: 45%;
   padding-left: 1.50rem;
-  border: lightgray solid;
-  border-radius: 1px;
   font-family: 'Raleway', sans-serif; }
   .main-aves .shop-res .shop-title {
     color: #000;
-    font-size: 1.75rem;
+    font-size: 1.50rem;
     padding: 1rem 0.10rem; }
   .main-aves .shop-res .box-res {
     display: flex;
@@ -183,7 +181,7 @@ header {
 
 .main-aves .checkOut .checkOutTitle {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.50rem;
   padding-left: 6.40rem;
   margin: 5rem 0rem 1rem; }
 
@@ -193,15 +191,25 @@ header {
     display: flex;
     margin: 0.50rem; }
     .main-aves .checkOut .container .row .col-50 {
-      padding: 10px 30px;
+      padding: 0.625rem 1.875rem;
       width: 60%;
       font-family: 'Raleway', sans-serif; }
+      .main-aves .checkOut .container .row .col-50 .title-address {
+        font-size: 1.40rem; }
       .main-aves .checkOut .container .row .col-50 .label-checkOut {
         display: flex;
-        padding: 8px 0px; }
-    .main-aves .checkOut .container .row .label-pay {
-      display: flex;
-      padding: 8px 0px; }
+        padding: 0.5rem 0rem; }
+      .main-aves .checkOut .container .row .col-50 .title-payment {
+        font-size: 1.40rem; }
+      .main-aves .checkOut .container .row .col-50 .label-pay {
+        display: flex;
+        padding: 0.5rem 0rem; }
+  .main-aves .checkOut .container .shop-box1,
+  .main-aves .checkOut .container .shop-box2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.10rem 3rem 0.10rem 1rem; }
 
 .main-aves .checkOut .shop-order {
   background-color: #e9ecef;
@@ -209,19 +217,11 @@ header {
   margin: 6rem 3rem 5rem 5rem;
   width: 45%;
   padding-left: 1.50rem;
-  border: lightgray solid;
-  border-radius: 1px;
   font-family: 'Raleway', sans-serif; }
   .main-aves .checkOut .shop-order .order-title {
     color: #000;
-    font-size: 1.75rem;
+    font-size: 1.50rem;
     padding: 1rem 0.10rem; }
-  .main-aves .checkOut .shop-order .shop-box1,
-  .main-aves .checkOut .shop-order .shop-box2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0.10rem 3rem 0.10rem 1rem; }
 
 .main-contact {
   color: black;
