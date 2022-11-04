@@ -179,7 +179,7 @@
     }
 }
 
-.main-aves {
+.main-catalog {
 
     .shop-res {
         background-color:#e9ecef;
@@ -203,7 +203,7 @@
         }
     }
 
-    .clas-birds {
+    .clas-bookss {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -229,51 +229,67 @@
                 font-family: 'Raleway', sans-serif;
                 font-size: 1.50rem;
                 padding-left: 6.40rem;
-                margin: 5rem 0rem 1rem;
+                margin: 5rem 0rem 3rem;
+                font-weight: 900;
             }
 
             .container {
-                 margin: 2rem 3.60rem;
+                margin: 2rem 3.60rem;
 
                .row {
                    display: flex;
                    margin: 0.50rem;
 
-                   .col-50 {
-                       padding: 0.625rem 1.875rem; 
-                       width: 60%;
-                       font-family: 'Raleway', sans-serif;
+                    .cont-1 {
 
-                       .title-address {
-                        font-size: 1.40rem;
-                       }
-
-                       .label-checkOut {
-                           display: flex;
-                           padding: 0.5rem 0rem; 
+                        .col-50 {
+                            padding: 0.625rem 1.875rem; 
+                            width: 60%;
+                            font-family: 'Raleway', sans-serif;
+ 
+                            .title-address {
+                                font-size: 1.40rem;
+                                font-weight: 500;
+                            }
+ 
+                            .label-checkOut {
+                                display: flex;
+                                padding: 0.5rem 0rem; 
+                            }
                         }
+                    }
+              
+                    .cont-2 {
 
-                        .title-payment {
-                           font-size: 1.40rem;
-                        }
+                        .col-50 {
+                            padding: 0.625rem 1.875rem; 
+                            width: 60%;
+                            font-family: 'Raleway', sans-serif;
+                          
+                            .title-payment { 
+                                margin: 3rem 0rem 0rem;
+                                font-size: 1.40rem;
+                                font-weight: 500;
+                            }
 
-                        .label-pay {
-                           display: flex;
-                           padding: 0.5rem 0rem; 
+                            .label-pay {
+                                display: flex;
+                                padding: 0.5rem 0rem; 
+                            }
+
                         }
+                    }
+
+                    .shop-box1,
+                    .shop-box2 {
+                       display: flex;
+                       flex-direction: row;
+                       justify-content: space-between;
+                       padding: 0.10rem 3rem 0.10rem 1rem;
                     }
                 }
 
-                .shop-box1,
-                .shop-box2 {
-                   display: flex;
-                   flex-direction: row;
-                   justify-content: space-between;
-                   padding: 0.10rem 3rem 0.10rem 1rem;
-                }
-            }
-
-            .shop-order {
+               .shop-order {
                 background-color:#e9ecef;
                 display: block;
                 margin: 6rem 3rem 5rem 5rem;
@@ -286,8 +302,9 @@
                    font-size: 1.50rem;
                    padding: 1rem 0.10rem;
                 }
-            }   
+               }   
         }
+    }
 }
 
 .main-contact {
