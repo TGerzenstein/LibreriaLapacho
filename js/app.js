@@ -131,8 +131,6 @@ function updateOrder(total) {
     carTotalprod.innerHTML = output;
 };
 
-
-
 function deleteProducts(event) {
     event.preventDefault()
     let prodId = this.id.split("-")
@@ -153,5 +151,19 @@ function deleteProducts(event) {
     localStorage.setItem('myapp_cart', JSON.stringify(carrito));
 };
 
+function finishPurchase() {
+    const newOrder = document.getElementById('order-block')
+    const purchaseComplete = document.getElementById('purchase-complete')
+    purchaseComplete.innerHTML = newOrder.innerHTML;
+    const checkOut = document.getElementById('c-out')
+    checkOut.classList.add('d-none');
+    const listProducts = document.getElementById('product-list')
+    listProducts.classList.add('d-none');
+    const resumeShop = document.getElementById('resume')
+    resumeShop.classList.add('d-none');
+};
+
+const deleteBook = document.getElementById('finish-purchase')
+    deleteBook.addEventListener("click", finishPurchase);
 
 initShop();

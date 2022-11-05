@@ -222,7 +222,7 @@ header {
 .main-catalog .checkOut .shop-order {
   background-color: #e9ecef;
   display: block;
-  margin: 6rem 3rem 5rem 5rem;
+  margin: 6rem 3rem 2rem 5rem;
   width: 45%;
   padding-left: 1.50rem;
   padding-bottom: 2rem;
@@ -230,6 +230,13 @@ header {
   .main-catalog .checkOut .shop-order .order-title {
     font-size: 1.50rem;
     padding: 2rem 1rem; }
+
+.main-catalog .checkOut .out {
+  padding-left: 1.50rem;
+  margin: 0rem 0rem 6rem 15rem; }
+  .main-catalog .checkOut .out .out-btn {
+    padding: 0.40rem 1rem;
+    width: 20%; }
 
 .main-contact {
   color: black;

@@ -52,14 +52,14 @@
   </header>
   <main class="main-catalog">
   <!-- Shopping cart -->
-    <div class="shop-res">
+    <div class="shop-res" id="resume">
       <p class="shop-title">Resumen del pedido</p>
       <p class="box-res">Total<span id="cart-total">0</span></p>
     </div>
   <!-- List of products -->
     <div class="clas-bookss" id="product-list"></div>
       <!-- CheckOut -->
-    <div class="checkOut">
+    <div class="checkOut" id="c-out">
         <h5 class="checkOutTitle">Check Out</h5>
         <form action="#">
           <div class="container">  
@@ -107,11 +107,16 @@
               <button type="submit">Continuar</button>
               <button type="submit">Volver al carrito</button>
           </div>
-          <div class="shop-order">
+          <div class="shop-order" id="order-block">
             <h5 class="order-title">Orden de compra</h5>
             <div id="shop-box-list"></div>
           </div>
         </form>
+        <div class="out">
+          <button class="out-btn" id="finish-purchase">Finalizar compra</button>
+        </div>
+    </div>
+    <div id="purchase-complete">
     </div>
   </main>
   <footer>
