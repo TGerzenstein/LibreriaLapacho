@@ -218,17 +218,17 @@ header {
       flex-direction: row;
       justify-content: space-between;
       padding: 0.10rem 3rem 0.10rem 1rem; }
-  .main-catalog .checkOut .container .shop-order {
-    background-color: #e9ecef;
-    display: block;
-    margin: 6rem 3rem 5rem 5rem;
-    width: 45%;
-    padding-left: 1.50rem;
-    font-family: 'Raleway', sans-serif; }
-    .main-catalog .checkOut .container .shop-order .order-title {
-      color: #000;
-      font-size: 1.50rem;
-      padding: 1rem 0.10rem; }
+
+.main-catalog .checkOut .shop-order {
+  background-color: #e9ecef;
+  display: block;
+  margin: 6rem 3rem 5rem 5rem;
+  width: 45%;
+  padding-left: 1.50rem;
+  font-family: 'Raleway', sans-serif; }
+  .main-catalog .checkOut .shop-order .order-title {
+    font-size: 1.50rem;
+    padding: 1rem 0.10rem; }
 
 .main-contact {
   color: black;

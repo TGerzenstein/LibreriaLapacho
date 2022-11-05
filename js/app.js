@@ -1,10 +1,11 @@
 
-const productList = [
-    {id: 1, title: "Virginia Woolf", precio: 6000},
-    {id: 2, title: "Federico Garcia Lorca", precio: 3000},
-    {id: 3, title: "Silvina Ocampo", precio: 1200}
-]
+//const productList = [
+//    {id: 1, title: "Virginia Woolf", precio: 6000},
+//    {id: 2, title: "Federico Garcia Lorca", precio: 3000},
+//    {id: 3, title: "Silvina Ocampo", precio: 1200}
+//]
 
+    var productList = [];
 let localStorageCart = localStorage.getItem('myapp_cart');
 if (localStorageCart) {
     localStorageCart = JSON.parse(localStorageCart)
@@ -12,11 +13,42 @@ if (localStorageCart) {
 
 var carrito = localStorageCart || [];
 
-const addToCartBtn = Array.from(document.getElementsByClassName("add-to-cart"))
-console.log(addToCartBtn);
-addToCartBtn.forEach(element => {
-    element.addEventListener("click", addToCart)
-});
+function loadCatalog(){
+     fetch('https://openlibrary.org/api/books?bibkeys=ISBN:0451526538,ISBN:8420431028&format=json&jscmd=data')
+     .then(response => response.json())
+     .then(data => {
+        //console.log(data)
+        Object.values(data).forEach(val => {
+            productList.push({
+                id: parseInt(val.identifiers.isbn_10[0]),
+                title: val.title,
+                precio: 500,
+                cover: val.cover.medium
+            })
+           
+          });
+          //console.log(productList);
+          let output = '';
+          productList.forEach((producto) => {
+            output += '<div class="card"  style="width: 18rem; height: 38rem;">' + 
+        '<img src="'+ producto.cover +'" class="card-img-top" alt="...">' +
+             '<div class="card-body">'+
+             '<h5 class="card-title">'+ producto.title +'</h5>'+
+             '<p class="card-text">' + producto.precio + ' +</p>' +
+             '<button id="product-' + producto.id + '" class="btn btn-primary add-to-cart">' + ' Agregar al carrito ' + '</button>' + 
+             '</div>' +
+             '</div>'
+       });
+       let carTotalprod = document.getElementById("product-list");
+       carTotalprod.innerHTML = output;
+       const addToCartBtn = Array.from(document.getElementsByClassName("add-to-cart"))
+       console.log(addToCartBtn);
+       addToCartBtn.forEach(element => {
+       element.addEventListener("click", addToCart)
+       });
+    });
+};
+
 
 function addToCart(event) {
     event.preventDefault();
@@ -29,6 +61,7 @@ function addToCart(event) {
 };
 
 function initShop() {
+    loadCatalog();
     let totalProductos = calcularTotalCarrito();
     let additional = 0;
     if (totalProductos > 0) {
@@ -40,13 +73,14 @@ function initShop() {
     const carTotalelement = document.getElementById("cart-total");
     carTotalelement.innerHTML = total;
     updateOrder(total);
-    initShop();
+    
 };
 
 //cambié parámetro libro por ID; 
 
 function seleccionarProducto(id) {
     let producto = encontrarProducto(id);
+    console.log(carrito);
     carrito.push(producto)
     let totalProductos = calcularTotalCarrito();
     let additional = 0;
@@ -85,9 +119,9 @@ function updateOrder(total) {
     '<p>'+ producto.title +'</p>' +
     '<p>'+ producto.precio +'</p>' + 
     '<button id="delproduct-'+ producto.id +'" class="remove-from-cart">Eliminar</button>' +
-  '</div>';
+    '</div>';
     });
-    output += '<p>'+ total +'</p>';
+    output += '<p> Total: '+ total +'</p>';
     console.log(output);
     let carTotalprod = document.getElementById("shop-box-list");
     carTotalprod.innerHTML = output;
@@ -118,3 +152,6 @@ function deleteProducts(event) {
     updateOrder(total);
     localStorage.setItem('myapp_cart', JSON.stringify(carrito));
 };
+
+
+initShop();
