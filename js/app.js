@@ -24,13 +24,13 @@ function loadCatalog(){
                 title: val.title,
                 precio: 500,
                 cover: val.cover.medium
-            })
+            });
            
           });
           //console.log(productList);
           let output = '';
           productList.forEach((producto) => {
-            output += '<div class="card"  style="width: 18rem; height: 38rem;">' + 
+            output += '<div class="card"  style="width: 18rem; height: 41rem;">' + 
         '<img src="'+ producto.cover +'" class="card-img-top" alt="...">' +
              '<div class="card-body">'+
              '<h5 class="card-title">'+ producto.title +'</h5>'+
@@ -42,7 +42,7 @@ function loadCatalog(){
        let carTotalprod = document.getElementById("product-list");
        carTotalprod.innerHTML = output;
        const addToCartBtn = Array.from(document.getElementsByClassName("add-to-cart"))
-       console.log(addToCartBtn);
+       //console.log(addToCartBtn);
        addToCartBtn.forEach(element => {
        element.addEventListener("click", addToCart)
        });
@@ -73,10 +73,14 @@ function initShop() {
     const carTotalelement = document.getElementById("cart-total");
     carTotalelement.innerHTML = total;
     updateOrder(total);
+
+    const quitToCartBtn = Array.from(document.getElementsByClassName("remove-from-cart"))
+console.log(quitToCartBtn);
+quitToCartBtn.forEach(element => {
+    element.addEventListener("click", deleteProducts)
+});
     
 };
-
-//cambié parámetro libro por ID; 
 
 function seleccionarProducto(id) {
     let producto = encontrarProducto(id);
@@ -121,17 +125,13 @@ function updateOrder(total) {
     '<button id="delproduct-'+ producto.id +'" class="remove-from-cart">Eliminar</button>' +
     '</div>';
     });
-    output += '<p> Total: '+ total +'</p>';
-    console.log(output);
+    output += '<p style="padding: 1rem;"> Total: '+ total +'</p>';
+    //console.log(output);
     let carTotalprod = document.getElementById("shop-box-list");
     carTotalprod.innerHTML = output;
 };
 
-const quitToCartBtn = Array.from(document.getElementsByClassName("remove-from-cart"))
-console.log(quitToCartBtn);
-quitToCartBtn.forEach(element => {
-    element.addEventListener("click", deleteProducts)
-});
+
 
 function deleteProducts(event) {
     event.preventDefault()

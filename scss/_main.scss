@@ -186,13 +186,13 @@
         display: block;
         margin: 2rem 3rem 6rem 5rem;
         width: 45%;
-        padding-left: 1.50rem;
+        padding: 1rem;
         font-family: 'Raleway', sans-serif;
 
         .shop-title {
             color: #000;
             font-size: 1.50rem;
-            padding: 1rem 0.10rem;
+            padding: 1rem 1.10rem;
         }
         
         .box-res {
@@ -296,17 +296,17 @@
                 margin: 6rem 3rem 5rem 5rem;
                 width: 45%;
                 padding-left: 1.50rem;
+                padding-bottom: 2rem;
                 font-family: 'Raleway', sans-serif;
 
                 .order-title {
                     font-size: 1.50rem;
-                    padding: 1rem 0.10rem;
+                    padding: 2rem 1rem;
                 }    
             }
         
     }
 }
-
 
 .main-contact {
     color: black;
