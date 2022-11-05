@@ -179,6 +179,7 @@ header {
     background-color: #9CBF4E;
     border-color: #9CBF4E; }
 
+.main-catalog #purchase-complete .checkOutTitle,
 .main-catalog .checkOut .checkOutTitle {
   font-family: 'Raleway', sans-serif;
   font-size: 1.50rem;
@@ -186,32 +187,42 @@ header {
   margin: 5rem 0rem 3rem;
   font-weight: 900; }
 
+.main-catalog #purchase-complete .container,
 .main-catalog .checkOut .container {
   margin: 2rem 3.60rem; }
+  .main-catalog #purchase-complete .container .row,
   .main-catalog .checkOut .container .row {
     display: flex;
     margin: 0.50rem; }
+    .main-catalog #purchase-complete .container .row .cont-1 .col-50,
     .main-catalog .checkOut .container .row .cont-1 .col-50 {
       padding: 0.625rem 1.875rem;
       width: 60%;
       font-family: 'Raleway', sans-serif; }
+      .main-catalog #purchase-complete .container .row .cont-1 .col-50 .title-address,
       .main-catalog .checkOut .container .row .cont-1 .col-50 .title-address {
         font-size: 1.40rem;
         font-weight: 500; }
+      .main-catalog #purchase-complete .container .row .cont-1 .col-50 .label-checkOut,
       .main-catalog .checkOut .container .row .cont-1 .col-50 .label-checkOut {
         display: flex;
         padding: 0.5rem 0rem; }
+    .main-catalog #purchase-complete .container .row .cont-2 .col-50,
     .main-catalog .checkOut .container .row .cont-2 .col-50 {
       padding: 0.625rem 1.875rem;
       width: 60%;
       font-family: 'Raleway', sans-serif; }
+      .main-catalog #purchase-complete .container .row .cont-2 .col-50 .title-payment,
       .main-catalog .checkOut .container .row .cont-2 .col-50 .title-payment {
         margin: 3rem 0rem 0rem;
         font-size: 1.40rem;
         font-weight: 500; }
+      .main-catalog #purchase-complete .container .row .cont-2 .col-50 .label-pay,
       .main-catalog .checkOut .container .row .cont-2 .col-50 .label-pay {
         display: flex;
         padding: 0.5rem 0rem; }
+    .main-catalog #purchase-complete .container .row .shop-box1,
+    .main-catalog #purchase-complete .container .row .shop-box2,
     .main-catalog .checkOut .container .row .shop-box1,
     .main-catalog .checkOut .container .row .shop-box2 {
       display: flex;
@@ -219,6 +230,7 @@ header {
       justify-content: space-between;
       padding: 0.10rem 3rem 0.10rem 1rem; }
 
+.main-catalog #purchase-complete .shop-order,
 .main-catalog .checkOut .shop-order {
   background-color: #e9ecef;
   display: block;
@@ -227,13 +239,16 @@ header {
   padding-left: 1.50rem;
   padding-bottom: 2rem;
   font-family: 'Raleway', sans-serif; }
+  .main-catalog #purchase-complete .shop-order .order-title,
   .main-catalog .checkOut .shop-order .order-title {
     font-size: 1.50rem;
     padding: 2rem 1rem; }
 
+.main-catalog #purchase-complete .out,
 .main-catalog .checkOut .out {
   padding-left: 1.50rem;
   margin: 0rem 0rem 6rem 15rem; }
+  .main-catalog #purchase-complete .out .out-btn,
   .main-catalog .checkOut .out .out-btn {
     padding: 0.40rem 1rem;
     width: 20%; }

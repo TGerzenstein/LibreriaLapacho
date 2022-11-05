@@ -154,7 +154,7 @@ function deleteProducts(event) {
 function finishPurchase() {
     const newOrder = document.getElementById('order-block')
     const purchaseComplete = document.getElementById('purchase-complete')
-    purchaseComplete.innerHTML = newOrder.innerHTML;
+    purchaseComplete.innerHTML = newOrder.outerHTML;
     const checkOut = document.getElementById('c-out')
     checkOut.classList.add('d-none');
     const listProducts = document.getElementById('product-list')
