@@ -1,10 +1,4 @@
 
-//const productList = [
-//    {id: 1, title: "Virginia Woolf", precio: 6000},
-//    {id: 2, title: "Federico Garcia Lorca", precio: 3000},
-//    {id: 3, title: "Silvina Ocampo", precio: 1200}
-//]
-
     var productList = [];
 let localStorageCart = localStorage.getItem('myapp_cart');
 if (localStorageCart) {
@@ -17,7 +11,6 @@ function loadCatalog(){
      fetch('https://openlibrary.org/api/books?bibkeys=ISBN:0451526538,ISBN:8420431028&format=json&jscmd=data')
      .then(response => response.json())
      .then(data => {
-        //console.log(data)
         Object.values(data).forEach(val => {
             productList.push({
                 id: parseInt(val.identifiers.isbn_10[0]),
@@ -27,7 +20,6 @@ function loadCatalog(){
             });
            
           });
-          //console.log(productList);
           let output = '';
           productList.forEach((producto) => {
             output += '<div class="card"  style="width: 18rem; height: 41rem;">' + 
@@ -42,7 +34,6 @@ function loadCatalog(){
        let carTotalprod = document.getElementById("product-list");
        carTotalprod.innerHTML = output;
        const addToCartBtn = Array.from(document.getElementsByClassName("add-to-cart"))
-       //console.log(addToCartBtn);
        addToCartBtn.forEach(element => {
        element.addEventListener("click", addToCart)
        });
@@ -126,7 +117,6 @@ function updateOrder(total) {
     '</div>';
     });
     output += '<p style="padding: 1rem;"> Total: '+ total +'</p>';
-    //console.log(output);
     let carTotalprod = document.getElementById("shop-box-list");
     carTotalprod.innerHTML = output;
 };
