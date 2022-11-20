@@ -165,7 +165,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0.10rem 3rem 0.10rem 1rem; }
+    padding: 0.10rem 3rem 0.20rem 1rem; }
 
 .main-catalog .clas-bookss {
   display: flex;
