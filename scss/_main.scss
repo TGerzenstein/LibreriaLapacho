@@ -17,7 +17,7 @@
     .box-1 {
         
         .imagen {
-           background-image: url("/img/RosaLapacho.jpg");
+           background-image: url("../img/RosaLapacho.jpg");
            background-repeat: no-repeat;
            background-size: cover;
            height: 72vh;  
@@ -61,7 +61,7 @@
             @include boxes-t;
 
             .img-box1 {
-                background-image: url("/img/VirginiaWoolf.png");
+                background-image: url("../img/VirginiaWoolf.png");
                 background-repeat: no-repeat;
                 background-size: cover;
                 height: 75vh;  
@@ -81,7 +81,7 @@
             @include boxes-t;
 
             .img-box2 {
-                background-image: url("/img/FedericoGarciaLorca.png");
+                background-image: url("../img/FedericoGarciaLorca.png");
                 background-repeat: no-repeat;
                 background-size: cover;
                 height: 75vh;  
@@ -101,7 +101,7 @@
              @include boxes-t;
 
             .img-box3 {
-                background-image: url("/img/SilvinaOcampo.png");
+                background-image: url("../img/SilvinaOcampo.png");
                 background-repeat: no-repeat;
                 background-size: cover;
                 height: 75vh;  
@@ -121,7 +121,7 @@
             @include boxes-t();
 
             .img-box4 {
-                background-image: url("/img/OlgaOrozco.png");
+                background-image: url("../img/OlgaOrozco.png");
                 background-repeat: no-repeat;
                 background-size: cover;
                 height: 75vh;  
@@ -141,7 +141,7 @@
             @include boxes-t();
 
             .img-box5 {
-                background-image: url("/img/OrlandoVirginiaWoolf.png");
+                background-image: url("../img/OrlandoVirginiaWoolf.png");
                 background-repeat: no-repeat;
                 background-size: cover;
                 height: 75vh;  
@@ -161,7 +161,7 @@
             @include boxes-t();
 
             .img-box6 {
-                background-image: url("/img/JLBorges.png");
+                background-image: url("../img/JLBorges.png");
                 background-repeat: no-repeat;
                 background-size: cover;
                 height: 75vh;  
